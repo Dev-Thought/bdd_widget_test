@@ -72,8 +72,6 @@ String generateFeatureDart(
   );
 
   for (final feature in features) {
-    sb.writeln("  group('''${feature.first.value}''', () {");
-
     final hasBackground = _parseBackground(
       sb,
       feature,
@@ -203,7 +201,6 @@ void _parseFeature(
       );
     }
   }
-  sb.writeln('  });');
 }
 
 bool _isNewScenario(LineType type) =>
